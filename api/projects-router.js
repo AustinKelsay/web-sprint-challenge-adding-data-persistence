@@ -7,6 +7,7 @@ const Projects = require('./projects-model.js');
 router.get('/', (req, res) => {
   Projects.find()
   .then(projects => {
+      console.log(projects);
     res.json(projects);
   })
   .catch(err => {
@@ -25,4 +26,4 @@ router.post("/", (req, res) => {
     });
 });
 
-module.exports = router;s
+module.exports = router;
